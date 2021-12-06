@@ -9,7 +9,7 @@ export function Buttons({action, label, double, triple, operation}){
 
     return(
       <TouchableHighlight onPress={action}>
-        <Text style={stylesButton}>{label}</ Text>
+        <Text style={stylesButton}>{label}</Text>
       </TouchableHighlight>
     );
 }

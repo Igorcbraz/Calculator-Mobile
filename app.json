@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "calculator-react-native",
-    "slug": "calculator-react-native",
+    "name": "Calculator-Mobile",
+    "slug": "calculator-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#282A32"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -20,9 +20,11 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.igorcbraz.calculator",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#282A32"
       }
     },
     "web": {

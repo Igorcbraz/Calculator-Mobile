@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
       borderColor: '#282a32',
     }, 
     countsText: {
-        fontSize: '1.5rem',
+        fontSize: 24,
         color: '#FFF',
     }
   });

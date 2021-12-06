@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Calculator } from './src/Pages/Calculator';
+import { Calculator } from './src/pages/Calculator';
 import { HistoryCounts } from './src/pages/HistoryCounts';
 
 import { NavigationContainer } from '@react-navigation/native';
