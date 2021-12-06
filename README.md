@@ -1,6 +1,6 @@
 <!-- Logo -->
 <div align="center">
-  <h1>Contact List</h1>
+  <h1>Calculator Mobile</h1>
   <p>A simple and elegant way to make your counts</p>
 </div>
 
@@ -43,5 +43,5 @@ expo start
 
 🤖 On your Android device, press "Scan QR Code" on the "Projects" tab of the Expo Go app and scan the QR code you see in the terminal or in Expo Dev Tools.
 
-Now, you can see this beatiful application :)
+Now, you can see this awesome application :)
 
