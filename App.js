@@ -1,62 +1,28 @@
-import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Buttons } from './src/Components/Buttons';
-import { Display } from './src/Components/Display';
+import React from 'react';
 
-export default function app(){
-  const [result, setResult] = useState('');
+import { Calculator } from './src/Pages/Calculator';
+import { HistoryCounts } from './src/pages/HistoryCounts';
 
-  function setExpression(value){
-      setResult(result + value);
-  }
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-  function calc(){
-    setResult(eval(result));
-  }
+export default function App() {
+  const Stack = createStackNavigator();
 
-  function reset(){
-    setResult('');
-  }
-
-  return(
-    <View style={styles.container}>
-      <Display value={result} isHistory/>
-      <Display value={result}/>
-
-      <View style={styles.buttonsContainer}>
-        <Buttons label='AC'triple action={reset} />
-        <Buttons label='/' action={() => setExpression('/')} operation/>
-        <Buttons label='7' action={() => setExpression('7')} />
-        <Buttons label='8' action={() => setExpression('8')} />
-        <Buttons label='9' action={() => setExpression('9')} />
-        <Buttons label='*' action={() => setExpression('*')} operation/>
-        <Buttons label='4' action={() => setExpression('4')} />
-        <Buttons label='5' action={() => setExpression('5')} />
-        <Buttons label='6' action={() => setExpression('6')} />
-        <Buttons label='-' action={() => setExpression('-')} operation/>
-        <Buttons label='1' action={() => setExpression('1')} />
-        <Buttons label='2' action={() => setExpression('2')} />
-        <Buttons label='3' action={() => setExpression('3')} />
-        <Buttons label='+' action={() => setExpression('+')} operation/>
-        <Buttons label='0' action={() => setExpression('0')}   double/>
-        <Buttons label='.' action={() => setExpression('.')}/>
-        <Buttons label='=' action={calc} operation/>
-      </View>
-    </View>
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouterName="Calculator">
+        <Stack.Screen name="Calculator" component={Calculator} 
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen name="HistoryCounts" component={HistoryCounts}
+          options={{
+            title: 'Voltar'
+          }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#282a32',
-  },
-  buttonsContainer:{
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    borderRadius: 30,
-    paddingTop: 20,
-    paddingBottom: 20,
-    backgroundColor: '#1f1f1f',
-  }
-});

@@ -1,17 +1,24 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, TouchableHighlight} from 'react-native';
 
-
-export function Display({value, isHistory}){
+export function Display({value, history, action}){
     return(
       <View style={styles.display}>
+        <TouchableHighlight onPress={action}>
+          <Text 
+            style={styles.miniDisplay} 
+            numberofLines={1}
+          >
+            {history}
+          </Text>
+        </TouchableHighlight>
+
         <Text 
-          style={isHistory ? styles.miniDisplay : styles.displayValue} 
+          style={styles.displayValue} 
           numberofLines={1}
-        
         >
           {value || 0}
-        </ Text>
+        </Text>
       </ View>
     );
 }
@@ -24,8 +31,19 @@ const styles = StyleSheet.create({
         alignItems: 'flex-end',
     },
     miniDisplay: {
-      fontSize: 20,
-      color: '#fff'
+      fontSize: 22,
+      color: '#c3c5c5',
+      
+      shadowColor: '#1d1e24',
+      shadowOffset: {
+        width: 0,
+        height: 9,
+      },
+      shadowOpacity: 0.6,
+      shadowRadius: 15,
+      borderRadius: 15,
+      paddingHorizontal: 20,
+      paddingVertical: 5,
     },
     displayValue: {
         fontSize: 55,

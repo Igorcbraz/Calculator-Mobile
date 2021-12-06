@@ -16,27 +16,29 @@ export function Buttons({action, label, double, triple, operation}){
 
 const styles = StyleSheet.create({
   button: {
-    fontSize: 40,
     height: Dimensions.get('window').width / 4,
     width: Dimensions.get('window').width / 4,
-    padding: 20,
+    
+    fontSize: 40,
     textAlign: 'center',
+    color: '#e3e3e3',
+    backgroundColor: '#282a32',
+
     borderwidth: 1,
     borderColor: '#BBB',
-    color: '#e3e3e3',
     borderRadius: 100,
-    backgroundColor: '#282a32'
+    
+    padding: 20,
   },
   buttonoperation: {
       color: '#fff',
-      backgroundColor: '#136a8a'
+      backgroundColor: '#136a8a',
   },
   buttonDouble: {
       width: (Dimensions.get('window').width / 4) * 2,
   },
   buttonTriple: {
       width: (Dimensions.get('window').width / 4) * 3,
-      backgroundColor: '#267871'
+      backgroundColor: '#267871',
   }
 });
-// ff9966
