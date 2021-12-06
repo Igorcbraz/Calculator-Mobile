@@ -67,7 +67,8 @@ export function Calculator({ route, navigation }){
     buttonsContainer:{
       flexDirection: 'row',
       flexWrap: 'wrap',
-      borderRadius: 30,
+      borderTopLeftRadius: 30,
+      borderTopRightRadius: 30,
       paddingTop: 20,
       paddingBottom: 20,
       backgroundColor: '#1f1f1f',
