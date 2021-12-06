@@ -1,11 +1,12 @@
 <!-- Logo -->
 <div align="center">
-  <h1>Calculator Mobile</h1>
+  <h1>📱 Calculator Mobile 🧮</h1>
   <p>A simple and elegant way to make your counts</p>
 </div>
 
 <div align="center">
-  Imagem
+   <img widht="340px" height="660px" src="images/Calculator.png"/>
+   <img widht="340px" height="660px" src="images/History.png"/>
 </div>
 
 ## 🧪 Technologies
