@@ -1,6 +1,6 @@
 <!-- Logo -->
 <div align="center">
-  <h1>Contact List</h1>
+  <h1>Calculator Mobile</h1>
   <p>A simple and elegant way to make your counts</p>
 </div>
 
