@@ -16,10 +16,16 @@ export function Calculator({ route, navigation }){
     }, [historyCount])
 
     function setExpression(value){
+      if (result.includes(`${value || '.' || '+' || '-' || '*' || '/'}`) &&
+          (value === '.' ||value === '+' ||value === '-' ||value === '*' ||value === '/')){
+        return;
+      } 
+      
       setResult(result + value);
     }
   
     function calc(){
+      console.log({calcValue: result})
       setHistory(history => [...history, result])
       setResult(eval(result));
     }

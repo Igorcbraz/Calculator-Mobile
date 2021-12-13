@@ -2,6 +2,8 @@ import React from 'react';
 import {StyleSheet, Text, View, TouchableHighlight} from 'react-native';
 
 export function Display({value, history, action}){
+    
+
     return(
       <View style={styles.display}>
         <TouchableHighlight onPress={action}>
